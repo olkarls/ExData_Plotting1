@@ -16,5 +16,9 @@ clean_data <- function() {
   # Converts coloumn Global_active_power to numeric
   data$Global_active_power <- as.numeric(as.character(data$Global_active_power))
 
+  data$Sub_metering_1 <- as.numeric(as.character(data$Sub_metering_1))
+  data$Sub_metering_2 <- as.numeric(as.character(data$Sub_metering_2))
+  data$Sub_metering_3 <- as.numeric(as.character(data$Sub_metering_3))
+
   return(data)
 }

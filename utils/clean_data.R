@@ -14,7 +14,7 @@ clean_data <- function() {
   data <- transform(data, DateTime = as.POSIXct(paste(Date, Time)))
 
   # Converts coloumn Global_active_power to numeric
-  data$Global_active_power <- as.numeric(data$Global_active_power)
+  data$Global_active_power <- as.numeric(as.character(data$Global_active_power))
 
   return(data)
 }
